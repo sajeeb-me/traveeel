@@ -6,6 +6,7 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Loading from '../Loading/Loading';
 
 const Signup = () => {
     const navigate = useNavigate();
@@ -57,14 +58,14 @@ const Signup = () => {
         createUser,
         createLoading,
         createError,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
 
     if (createUser) {
         navigate('/')
     }
     if (createLoading) {
-        console.log(createLoading)
+        return <Loading />
     }
 
     const handleSubmit = event => {
@@ -88,7 +89,7 @@ const Signup = () => {
 
     return (
         <div>
-            <section className='grid grid-cols-1 md:grid-cols-2 px-4 md:px-[120px] my-10'>
+            <section className='grid grid-cols-1 md:grid-cols-2 px-4 md:px-[150px] my-10'>
                 <div className='hidden md:block'>
                     <img className='w-full h-[600px] rounded-l-3xl' src={SignupImage} alt="" />
                 </div>
