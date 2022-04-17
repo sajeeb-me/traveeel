@@ -12,7 +12,6 @@ const Header = () => {
             <Link to='/' className='text-2xl font-semibold hidden md:block'><p>Traveeel</p></Link>
             <div className='flex gap-2 md:gap-10'>
                 <CustomLink className='hover:text-sky-700 py-1' to='/'>Home</CustomLink>
-                {/* <CustomLink className='hover:text-sky-700 py-1' to='/explore'>Explore</CustomLink> */}
                 <CustomLink className='hover:text-sky-700 py-1' to='/blogs'>Blogs</CustomLink>
                 <CustomLink className='hover:text-sky-700 py-1' to='/about'>About</CustomLink>
             </div>

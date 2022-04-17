@@ -3,10 +3,17 @@ import GoogleIcon from '../../icons/google.png'
 import FacebookIcon from '../../icons/facebook.png'
 import { useSignInWithFacebook, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { useNavigate } from 'react-router-dom';
 
 const SocialMidea = () => {
+    const navigate = useNavigate()
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const [signInWithFacebook, facebookUser, facebookLoading, facebookError] = useSignInWithFacebook(auth);
+
+    if (googleUser || facebookUser) {
+        navigate('/')
+    }
+
     return (
         <div>
             <section>
