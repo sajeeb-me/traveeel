@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Couple Package",
+        "price": 150,
+        "img": "https://i.ibb.co/mJvjDZZ/couple-4565431-640.jpg",
+        "description": "This package is best for Couples. If you want an amazing tour with your partner this is the best package for you."
+    },
+    {
+        "id": 2,
+        "name": "Couple Package",
+        "price": 150,
+        "img": "https://i.ibb.co/mJvjDZZ/couple-4565431-640.jpg",
+        "description": "This package is best for Couples. If you want an amazing tour with your partner this is the best package for you."
+    },
+    {
+        "id": 3,
+        "name": "Couple Package",
+        "price": 150,
+        "img": "https://i.ibb.co/mJvjDZZ/couple-4565431-640.jpg",
+        "description": "This package is best for Couples. If you want an amazing tour with your partner this is the best package for you."
+    }
+]
