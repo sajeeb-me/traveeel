@@ -1,4 +1,5 @@
 import React from 'react';
+import Explore from '../Explore/Explore';
 import HomeHeader from '../HomeHeader/HomeHeader';
 import Packeges from '../Packeges/Packeges';
 import SearchTrip from '../SearchTrip/SearchTrip';
@@ -9,6 +10,7 @@ const Home = () => {
             <HomeHeader />
             <SearchTrip />
             <Packeges />
+            <Explore />
         </div>
     );
 };
