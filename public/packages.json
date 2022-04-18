@@ -2,22 +2,22 @@
     {
         "id": 1,
         "name": "Couple Package",
-        "price": 150,
-        "img": "https://i.ibb.co/mJvjDZZ/couple-4565431-640.jpg",
+        "price": 350,
+        "img": "https://i.ibb.co/30pjVKh/couple.jpg",
         "description": "This package is best for Couples. If you want an amazing tour with your partner this is the best package for you."
     },
     {
         "id": 2,
-        "name": "Couple Package",
-        "price": 150,
-        "img": "https://i.ibb.co/mJvjDZZ/couple-4565431-640.jpg",
-        "description": "This package is best for Couples. If you want an amazing tour with your partner this is the best package for you."
+        "name": "Group Package",
+        "price": 99,
+        "img": "https://i.ibb.co/y8r7ygV/group.jpg",
+        "description": "This package is best for Groups. If you want an amazing tour with your friends this is the best package for you."
     },
     {
         "id": 3,
-        "name": "Couple Package",
-        "price": 150,
-        "img": "https://i.ibb.co/mJvjDZZ/couple-4565431-640.jpg",
-        "description": "This package is best for Couples. If you want an amazing tour with your partner this is the best package for you."
+        "name": "Corporate Package",
+        "price": 120,
+        "img": "https://i.ibb.co/yqtVRv7/corporate.jpg",
+        "description": "This package is best for Corporate peoples. If you want an amazing tour with your collages this is the best package for you."
     }
 ]
