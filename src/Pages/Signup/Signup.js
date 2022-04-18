@@ -16,6 +16,7 @@ const Signup = () => {
     const [email, setEmail] = useState({ value: "", error: "" });
     const [pass, setPass] = useState({ value: "", error: "" });
     const [confirmPass, setConfirmPass] = useState({ value: "", error: "" });
+    const [agree, setAgree] = useState(false)
 
     const handlefName = inputValue => {
         if (inputValue.length > 0) {
@@ -116,9 +117,10 @@ const Signup = () => {
                             <input onBlur={(event) => handleConfirmPass(event.target.value)} className='block placeholder:text-white pl-1 py-1 mb-4 outline-none bg-transparent border-white border-opacity-40 border-b w-full' type="password" placeholder='Confirm Password' />
                             {confirmPass.error && <p className='text-xs text-red-500 -mt-3'>{confirmPass.error}</p>}
 
-                            <input className='' type="checkbox" name="terms" id="terms" />
-                            <label className='ml-2' htmlFor="terms">Accept all terms and conditions.</label>
-                            <input className='block w-full mt-5 py-2 rounded-md font-semibold bg-white text-sky-700 cursor-pointer' type="submit" value="Sign up" />
+                            <input onClick={() => setAgree(!agree)} type="checkbox" name="terms" id="terms" />
+                            <label className={`ml-2 ${agree ? 'opacity-100' : 'opacity-50'}`} htmlFor="terms">Accept all terms and conditions.</label>
+
+                            < input disabled={!agree} className='w-full mt-5 py-2 rounded-md font-semibold bg-white text-sky-700 cursor-pointer disabled:cursor-not-allowed disabled:opacity-60' type="submit" value="Sign up" />
                         </form>
                         <Link to='/login'><p className='opacity-50 hover:opacity-100 my-3 duration-200 ease-in'>Already have account?</p></Link>
                         <div>

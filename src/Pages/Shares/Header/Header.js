@@ -9,7 +9,7 @@ const Header = () => {
     const [user, loading, error] = useAuthState(auth);
     return (
         <nav className='flex justify-between items-center px-5 md:px-[120px] py-3 sticky top-0 bg-white z-10'>
-            <Link to='/' className='text-2xl font-semibold hidden md:block'><p>Traveeel</p></Link>
+            <Link to='/' className='text-2xl font-semibold hidden md:block'><p>Trav<span className='text-sky-700'>eee</span>l</p></Link>
             <div className='flex gap-2 md:gap-10'>
                 <CustomLink className='hover:text-sky-700 py-1' to='/'>Home</CustomLink>
                 <CustomLink className='hover:text-sky-700 py-1' to='/blogs'>Blogs</CustomLink>
@@ -17,14 +17,23 @@ const Header = () => {
             </div>
             {
                 user ?
-                    <button onClick={() => signOut(auth)} className=' bg-sky-700 py-2 px-5 text-white rounded-md hover:bg-sky-800 duration-200 ease-in'>Sign out</button>
+                    <button onClick={() => signOut(auth)} type="button"
+                        className="px-6 py-2 mb-1 bg-sky-700 text-white leading-tight rounded shadow-md hover:bg-sky-700 hover:shadow-lg focus:bg-sky-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-sky-700 active:shadow-lg transition duration-150 ease-in-out"
+                        data-mdb-ripple="true"
+                        data-mdb-ripple-color="light" to='/signup'>Sign out</button>
                     :
-                    <div className='flex gap-4'>
+                    <div className='flex items-center gap-4'>
                         <CustomLink className='hover:text-sky-700 py-1' to='/login'>Login</CustomLink>
-                        <CustomLink className=' bg-sky-700 py-2 px-5 text-white rounded-md hover:bg-sky-800 duration-200 ease-in' to='/signup'>Signup</CustomLink>
+                        <CustomLink
+                            type="button"
+                            className="px-6 py-2 mb-1 bg-sky-700 text-white leading-tight rounded shadow-md hover:bg-sky-700 hover:shadow-lg focus:bg-sky-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-sky-700 active:shadow-lg transition duration-150 ease-in-out"
+                            data-mdb-ripple="true"
+                            data-mdb-ripple-color="light" to='/signup'>
+                            Signup
+                        </CustomLink>
                     </div>
             }
-        </nav>
+        </nav >
     );
 };
 

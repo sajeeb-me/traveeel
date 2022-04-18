@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SignupImage from '../../images/signup.jpg';
 import SocialMidea from '../SocialMidea/SocialMidea';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -29,6 +29,7 @@ const Login = () => {
         signInLoading,
         signInError,
     ] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, passSending, passError] = useSendPasswordResetEmail(auth);
 
 
     if (signInUser) {
@@ -38,10 +39,11 @@ const Login = () => {
         return <Loading />
     }
 
-    const handleSubmit = event => {
+    const handleSubmit = async (event) => {
         event.preventDefault()
         if (!signInError) {
-            signInWithEmailAndPassword(email, pass)
+            await signInWithEmailAndPassword(email, pass)
+            console.log(email, pass)
         }
         else {
             switch (signInError?.code) {
@@ -54,8 +56,18 @@ const Login = () => {
                 default:
                     toast.error("Something went wrong!")
             }
+            console.log(email, pass)
         }
     }
+    const handlePassReset = async () => {
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast.info("Reset link sent")
+        } else {
+            toast.error("Please provide your email.")
+        }
+    }
+
     return (
         <div>
             <section className='grid grid-cols-1 md:grid-cols-2 px-4 md:px-[150px] my-10'>
@@ -72,7 +84,8 @@ const Login = () => {
 
                             <input className='block w-full mt-5 py-2 rounded-md font-semibold bg-white text-sky-700 cursor-pointer' type="submit" value="Login" />
                         </form>
-                        <Link to='/signup'><p className='opacity-50 hover:opacity-100 my-3 duration-200 ease-in'>Don't have account?</p></Link>
+                        <button onClick={handlePassReset}><p className='opacity-50 hover:opacity-100 mt-2 duration-200 ease-in'>Forget password?</p></button>
+                        <Link to='/signup'><p className='opacity-50 hover:opacity-100 my-2 duration-200 ease-in'>Don't have account?</p></Link>
                         <div>
                             <SocialMidea />
                         </div>

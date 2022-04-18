@@ -3,7 +3,7 @@ import LoadingImg from '../../images/loading.gif'
 
 const Loading = () => {
     return (
-        <div className='flex justify-center'>
+        <div className='min-h-[75vh] flex justify-center'>
             <section>
                 <img src={LoadingImg} alt="" />
             </section>
