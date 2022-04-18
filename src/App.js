@@ -6,6 +6,7 @@ import Checkout from './Pages/Home/Checkout/Checkout';
 import Home from './Pages/Home/Home/Home';
 import Loading from './Pages/Loading/Loading';
 import Login from './Pages/Login/Login';
+import NotFoundPage from './Pages/NotFoundPage/NotFoundPage';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import Footer from './Pages/Shares/Footer/Footer';
 import Header from './Pages/Shares/Header/Header';
@@ -28,6 +29,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/loading' element={<Loading />} />
+        <Route path='*' element={<NotFoundPage />} />
       </Routes>
       <Footer />
     </div>
