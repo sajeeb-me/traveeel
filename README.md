@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# Traveeel
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is for all `Travelers` love to Travel all over the world.
 
-## Available Scripts
+## [Live Site Link](https://traveeel-7ce5d.web.app/)
 
-In the project directory, you can run:
+Click the link to view my live site: [https://traveeel-7ce5d.web.app](https://traveeel-7ce5d.web.app/)
 
-### `npm start`
+### `On this Project: `
+* In `Home` section you will get the overview about our site. Your will get `Our packages` section here and from that section you can select the best package for you.
+* In `Our Packages` section you wil find a `Book now` button which will take you to the `Checkout` page. And then you can confirm your `Booking` From there.
+* The `Checkout` section is Protected route. So, you have to be Logged in first otherwise it will take you to `Login` route first.
+* In `Blogs` section you will find the `answers of your 3 Questions`.
+* In `About` section you will get the information about me.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### `Technologies used in this project: `
+* Google Firebase (for Authentication)
+* React Firebase Hooks (Firebase Hook)
+* Tailwind framework (CSS framework)
+* React Router
+* React Icons (for Icons)
+* Tailwind Elements (for custom components)
+* Imgbb (for storing Photos)
