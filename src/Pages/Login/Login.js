@@ -43,7 +43,6 @@ const Login = () => {
         event.preventDefault()
         if (!signInError) {
             await signInWithEmailAndPassword(email, pass)
-            console.log(email, pass)
         }
         else {
             switch (signInError?.code) {
@@ -56,7 +55,6 @@ const Login = () => {
                 default:
                     toast.error("Something went wrong!")
             }
-            console.log(email, pass)
         }
     }
     const handlePassReset = async () => {
